@@ -5,6 +5,9 @@ This library's Cipher Suite is based AES128/256 and SHA-1/224/256/384/512 only f
 * TLS_RSA_WITH_AES_[128|256]_GCM_SHA[1|256|512]
 * TLS_EMPTY_RENOGOTIATION_INFO_SCSV
 
+## Fork Changes
+* Add write() that uses const
+
 ## Example
 Some sample sketches included(firmware/examples/a1-example.ino).
 
