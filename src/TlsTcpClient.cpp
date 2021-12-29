@@ -211,7 +211,12 @@ int TlsTcpClient::handShake() {
   return ret;
 }
 
-int TlsTcpClient::write(unsigned char *buff, int length) {
+int TlsTcpClient::write(const char *str) {
+  if (str == NULL) return 0;
+  return write(reinterpret_cast<const unsigned char *>(str), static_cast<int>(strlen(str)));
+}
+
+int TlsTcpClient::write(const unsigned char* buff, int length) {
   if (connected) {
       int ret = mbedtls_ssl_write( &ssl, buff, length );
       return ret;

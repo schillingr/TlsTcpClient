@@ -82,7 +82,8 @@ public:
              const char *clientKeyPem, const size_t clientKeyPemSize);
     int connect(uint8_t *ip, uint16_t port);
     int connect(char* domain, uint16_t port);
-    int write(unsigned char *buff, int length);
+    int write(const unsigned char *buff, int length);
+    int write(const char *buff);
     int read(unsigned char *buff, int length);
     int read();
     void stop() {close();};

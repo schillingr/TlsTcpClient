@@ -6,7 +6,7 @@ This library's Cipher Suite is based AES128/256 and SHA-1/224/256/384/512 only f
 * TLS_EMPTY_RENOGOTIATION_INFO_SCSV
 
 ## Fork Changes
-* Add write() that uses const
+* Add write() that uses const for easier conversion from TcpClient
 
 ## Example
 Some sample sketches included(firmware/examples/a1-example.ino).
